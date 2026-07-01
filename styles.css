@@ -1,0 +1,225 @@
+/* =========================
+   CSS RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+}
+
+/* =========================
+   DESIGN TOKENS
+========================= */
+:root {
+  --bg: #ccd5ae;
+  --text: #555555;
+  --muted: #777;
+  --border: #ddd;
+
+  --primary: #d4a373;
+
+  --card-bg: #fefae0;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+
+  --radius-sm: 12px;
+  --radius-md: 16px;
+
+  --gap-sm: 12px;
+  --gap-md: 20px;
+  --gap-lg: 24px;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.app {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: var(--gap-md);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  text-align: center;
+  margin-bottom: var(--gap-lg);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: var(--muted);
+}
+
+/* =========================
+   CARDS (BASE)
+========================= */
+.form-card,
+.winner-card,
+.product-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+   FORM
+========================= */
+.form-card {
+  padding: var(--gap-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.form-card input {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+}
+
+.form-card input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* =========================
+   BUTTONS (REUSABLE STYLE)
+========================= */
+button {
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  background: var(--primary);
+  color: var(--card-bg);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+   WINNER CARD
+========================= */
+.winner-card {
+  margin-top: var(--gap-md);
+  padding: var(--gap-lg);
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--card-bg);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: var(--gap-sm);
+}
+
+.winner-card h2 {
+  margin-bottom: 10px;
+}
+
+.winner-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.winner-savings {
+  color: var(--muted);
+}
+
+/* =========================
+   PRODUCTS SECTION
+========================= */
+.products {
+  margin-top: var(--gap-lg);
+}
+
+.products h3 {
+  margin-bottom: var(--gap-sm);
+}
+
+#product-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+.product-card {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card h4 {
+  margin-bottom: 4px;
+}
+
+.product-card small {
+  color: var(--muted);
+}
+
+.product-card strong {
+  font-size: 1.1rem;
+}
+
+/* =========================
+   INPUT NUMBER CLEANUP
+========================= */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copyright {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+
+  font-size: 12px;
+  color: var(--muted);
+  text-shadow: 0 0 5px var(--primary);
+  font-family: Arial, sans-serif;
+
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.copyright:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  transition: 0.2s;
+}

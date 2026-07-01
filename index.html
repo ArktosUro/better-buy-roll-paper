@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Better Buy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <header class="hero">
+      <h1>🧻 Better Buy</h1>
+      <p>Find the best value instantly</p>
+    </header>
+
+    <section class="form-card">
+
+      <input type="text" id="product-name" placeholder="Product name">
+
+      <input type="number" id="price" placeholder="Price in $(USD)" step="0.01">
+
+      <input type="number" id="sheets" placeholder="Total sheets">
+
+      <button id="add-btn">
+        Add Product
+      </button>
+
+      <button id="reset-btn">
+        Clear Results
+      </button>
+
+    </section>
+
+    <section class="winner-card">
+
+      <span class="badge">🏆 BEST VALUE</span>
+
+      <h2></h2>
+
+      <p class="winner-price">
+        Add products to see the best deal
+      </p>
+
+      <p class="winner-savings">
+        No savings yet
+      </p>
+
+    </section>
+
+    <section class="products">
+
+      <h3>Products</h3>
+
+      <div id="product-list">
+
+        <!-- Product cards render here -->
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div class="copyright">
+    JUSRIGH ©
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
